@@ -3,41 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pesona Desa Serindang</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <title>Profil Desa Serindang - Kabupaten Sambas</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
   <style>
+    /* Kustomisasi CSS */
     .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url('https://ibb.co.com/DHLqB3t1');
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
-      height: 80vh;
       color: white;
+      min-height: 90vh;
     }
+    
     .map-container iframe {
       width: 100%;
       height: 350px;
       border-radius: 12px;
+      border: 0;
+    }
+    
+    /* Memastikan gambar galeri memiliki tinggi yang sama dan rapi */
+    .gallery-img {
+      width: 100%;
+      height: 250px; /* Atur tinggi tetap untuk keseragaman */
+      object-fit: cover; /* Memotong gambar agar pas tanpa distorsi */
+      border-radius: 8px;
+    }
+    
+    /* Kustomisasi Kartu Profil/Fasilitas */
+    .card-profil img {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(25, 135, 84, 0.1); /* bg-success dengan opasitas rendah */
+      color: #198754; /* text-success */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
-<body>
+<body class="bg-light">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow-sm">
+  <!-- ============================ NAVIGATION BAR ============================ -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Desa Serindang</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#potensi">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sarana">Sarana & Prasarana</a></li>
           <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
           <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
         </ul>
@@ -45,126 +78,302 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- ============================ HERO SECTION ============================ -->
   <header id="beranda" class="hero-section d-flex align-items-center text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold">Selamat Datang di Desa Serindang</h1>
-      <p class="lead">Nikmati Keindahan Alam, Budaya, dan Kehangatan Masyarakat Lokal</p>
-      <a href="#potensi" class="btn btn-light btn-lg mt-3 text-success fw-semibold">Jelajahi Tentang Desa Serindang</a>
+      <h1 class="display-3 fw-bold mb-3">Selamat Datang di Desa Serindang</h1>
+      <p class="lead mb-4">Gerbang Menuju Pemandangan Hijau dan Kehangatan Lokal Sambas</p>
+      <a href="#profil" class="btn btn-light btn-lg text-success fw-semibold shadow">Kenali Lebih Dalam</a>
     </div>
   </header>
 
-  <!-- Profil Desa -->
-  <section id="profil" class="py-5">
-    <div class="container">
+  <!-- ============================ PROFIL DESA ============================ -->
+  <section id="profil" class="py-5 bg-white">
+    <div class="container py-lg-5">
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
-          <img src="https://ibb.co.com/DHLqB3t1" class="img-fluid rounded shadow" alt="Profil Desa">
+          <img src="https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow-sm" alt="Pemandangan Profil Desa Serindang">
         </div>
         <div class="col-md-6">
-          <h2 class="fw-bold text-success mb-3">Desa Serindang</h2>
-          <p class="text-secondary">Serindang adalah desa yang terdapat di Kecamatan Tebas, Kabupaten Sambas, Kalimantan Barat. Desa ini memiliki luas 10,02 km2 (2,53% dari wilayah Kecamatan Tebas).</p>
-          <p class="text-secondary">Visi kami adalah mewujudkan tata kelola desa yang transparan, maju, dan berdaya saing berbasis potensi lokal.</p>
+          <h2 class="display-5 fw-bold text-success mb-3">Tentang Kami</h2>
+          <p class="lead text-secondary">Desa Serindang adalah desa yang asri di Kecamatan Tebas, Kabupaten Sambas. Kami bangga dengan budaya yang terjaga, potensi pertanian yang melimpah, dan semangat gotong royong warga.</p>
+          <p class="text-secondary">Visi kami adalah mewujudkan desa yang maju, mandiri, dan berdaya saing dengan mengoptimalkan potensi lokal.</p>
+          <a href="#" class="btn btn-success mt-3 shadow-sm">Baca Profil Selengkapnya <i class="bi bi-arrow-right-short"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Fasilitas umum-->
-  <section id="potensi" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center fw-bold text-success mb-5">Tentang</h2>
+  <!-- ============================ SARANA & PRASARANA (BAGIAN YANG DIUBAH) ============================ -->
+  <section id="sarana" class="py-5 bg-light">
+    <div class="container py-lg-5">
+      <h2 class="text-center display-5 fw-bold text-success mb-5">Sarana & Prasarana Desa</h2>
       <div class="row g-4">
+        
+        <!-- Kartu 1: Pendidikan (Sekolah) -->
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Wisata Alam">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Sekolah</h5>
-              <p class="card-text text-secondary">Desa Serindang memiliki 6 sekolah. Taman Kanak-kanak/Paud di desa Serindang berjumlah 2 sekolah, dengan 4 orang guru dan 62 orang siswa. Sekolah Dasar di desa Serindang berjumlah 2 sekolah, dengan 24 orang guru dan 489 orang siswa. Sekolah Menengah Pertama di desa Serindang berjumlah 1 sekolah, dengan 14 orang guru dan 131 orang siswa.</p>
+          <div class="card h-100 card-profil border-0 shadow">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Gedung Sekolah Serindang">
+            <div class="card-body p-4">
+              <div class="icon-box shadow-sm">
+                <i class="bi bi-book"></i>
+              </div>
+              <h5 class="card-title fw-bold text-success">Lembaga Pendidikan</h5>
+              <p class="card-text text-secondary">Desa Serindang menyediakan sarana pendidikan dasar, termasuk Pendidikan Anak Usia Dini (PAUD), Taman Kanak-Kanak (TK), dan Sekolah Dasar (SD) yang memadai untuk mencerdaskan generasi penerus desa.</p>
+              <a href="#" class="btn btn-sm btn-outline-success">Lihat Daftar Sekolah</a>
             </div>
           </div>
         </div>
+        
+        <!-- Kartu 2: Penduduk -->
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="UMKM">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Kerajinan</h5>
-              <p class="card-text text-secondary">Produk olahan pangan lokal dan olahan kerajinan tangan khas warga desa.</p>
+          <div class="card h-100 card-profil border-0 shadow">
+            <img src="https://images.unsplash.com/photo-1603201667141-5a2d4c673378?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Ilustrasi Penduduk Desa">
+            <div class="card-body p-4">
+              <div class="icon-box shadow-sm">
+                <i class="bi bi-people"></i>
+              </div>
+              <h5 class="card-title fw-bold text-success">Data Kependudukan</h5>
+              <p class="card-text text-secondary">Dengan populasi yang harmonis, warga Desa Serindang sebagian besar bermata pencaharian sebagai petani, buruh tani, dan pelaku UMKM. Warga hidup berdampingan dengan semangat gotong royong yang tinggi.</p>
+              <a href="#" class="btn btn-sm btn-outline-success">Statistik Penduduk</a>
             </div>
           </div>
         </div>
+        
+        <!-- Kartu 3: Fasilitas Umum -->
         <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Seni Budaya">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Kesenian & Budaya</h5>
-              <p class="card-text text-secondary">Pertunjukan seni tradisional khas yang diselenggarakan pada hari perayaan tertentu.</p>
+          <div class="card h-100 card-profil border-0 shadow">
+            <img src="https://images.unsplash.com/photo-1563297298-639a0937a5f6?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Ilustrasi Fasilitas Umum Jalan Desa">
+            <div class="card-body p-4">
+              <div class="icon-box shadow-sm">
+                <i class="bi bi-building"></i>
+              </div>
+              <h5 class="card-title fw-bold text-success">Fasilitas Umum</h5>
+              <p class="card-text text-secondary">Tersedia berbagai sarana umum untuk mendukung kehidupan warga, termasuk Masjid/Musholla sebagai pusat ibadah, Lapangan Olahraga untuk kebugaran, Puskesmas Pembantu (Pustu) untuk kesehatan dasar, dan infrastruktur jalan desa.</p>
+              <a href="#" class="btn btn-sm btn-outline-success">Lihat Lokasi Fasilitas</a>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
 
-  <!-- Galeri -->
-   <section id="galeri" class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold text-success mb-5">Galeri Foto Serindang</h2>
-    <div class="row g-3">
-      <!-- Foto 1: Sawah Merapi -->
-      <div class="col-6 col-md-3">
-        <img src="https://images.unsplash.com/photo-1559628233-eb1b1a45564b?q=80&w=500&auto=format&fit=crop" class="img-fluid gallery-img shadow-sm" alt="Pemandangan Sawah">
-      </div>
-      <!-- Foto 2: FOTO JALAN DESA -->
-      <div class="col-6 col-md-3">
-        <img src="https://images.remotehub.com/8328615b8df511ef92953282f1eb02b4?w=1200&h=1600&fit=crop" class="img-fluid gallery-img shadow-sm" alt="Jalan Desa Serindang">
-      </div>
-      <!-- Foto 3: Jembatan/Sungai Desa -->
-      <div class="col-6 col-md-3">
-        <img src="https://images.unsplash.com/photo-1533118940502-3011409249e6?q=80&w=500&auto=format&fit=crop" class="img-fluid gallery-img shadow-sm" alt="Sungai Desa Serindang">
-      </div>
-      <!-- Foto 4: Rumah Tradisional/Suasana Malam -->
-      <div class="col-6 col-md-3">
-        <img src="https://images.unsplash.com/photo-1610488663833-2559a437d21b?q=80&w=500&auto=format&fit=crop" class="img-fluid gallery-img shadow-sm" alt="Suasana Pedesaan">
-      </div>
-      <!-- Foto 5: Lanskap Tambahan -->
-      <div class="col-6 col-md-3">
-          <img src="https://images.unsplash.com/photo-1601999114066-542db82322e7?q=80&w=500&auto=format&fit=crop" class="img-fluid gallery-img shadow-sm" alt="Pemandangan Alam">
-      </div>
-      <!-- Foto 6: Detail Pertanian -->
-      <div class="col-6 col-md-3">
-          <img src="https://images.unsplash.com/photo-1596700018179-813d9f957e8f?q=80&w=500&auto=format&fit=crop" class="img-fluid gallery-img shadow-sm" alt="Hasil Tani Serindang">
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- Lokasi & Kontak -->
-  <section id="lokasi" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center fw-bold text-success mb-5">Lokasi & Kontak</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4 mb-md-0 map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.271360000001!2d109.333333!3d-0.033333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDEnNjA4MCJTIDEwOcKwMjAnMDAuMCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+  <!-- ============================ GALERI FOTO (MENGGUNAKAN FOTO ANDA) ============================ -->
+  <section id="galeri" class="py-5 bg-white">
+    <div class="container py-lg-5">
+      <h2 class="text-center display-5 fw-bold text-success mb-5">Galeri Foto Serindang</h2>
+      <div class="row g-3">
+        <!-- Foto 1: Sawah dengan Kelapa (image_9.png) -->
+        <div class="col-6 col-md-3">
+          <img src="/image_9.png" class="gallery-img shadow-sm" alt="Pemandangan Sawah Desa Serindang">
         </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <h4 class="fw-bold mb-3">Kantor Desa Serindang</h4>
-          <p class="text-secondary"><i class="bi bi-geo-alt-fill text-success me-2"></i>Jl. Raya Desa Serindang No. 01</p>
-          <p class="text-secondary"><i class="bi bi-telephone-fill text-success me-2"></i>+62 812-3456-7890</p>
-          <p class="text-secondary"><i class="bi bi-envelope-fill text-success me-2"></i>kontak@serindang.desa.id</p>
+        <!-- Foto 2: Jalan Desa (image_10.png) -->
+        <div class="col-6 col-md-3">
+          <img src="/image_10.png" class="gallery-img shadow-sm" alt="Jalan Utama Desa Serindang">
         </div>
-      </div>
-    </div>
-  </section>
+        <!-- Foto 3: Sawah dengan Gunung (image_11.png) -->
+        <div class="col-6 col-md-3">
+          <img src="/image_11.png" class="gallery-img shadow-sm" alt="Pemandangan Sawah dan Gunung di SerindangTentu, ini adalah kode HTML lengkap untuk `index.html` Desa Serindang, di mana bagian "Potensi Wisata" telah sepenuhnya diganti dengan bagian baru berjudul **"Sarana & Prasarana Desa Serindang"**. Bagian ini sekarang menampilkan informasi tentang **Sekolah (Pendidikan)**, **Penduduk**, dan **Fasilitas Umum**.
 
-  <!-- Footer -->
-  <footer class="bg-success text-white py-3 text-center">
-    <div class="container">
-      <small>&copy; 2026 Pemerintah Desa Serindang. All Rights Reserved.</small>
-    </div>
-  </footer>
+### Kode HTML Lengkap (Diperbarui):
 
-  <!-- Bootstrap 5 JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-              </html>
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Desa Serindang - Kabupaten Sambas</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="[https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css](https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css)">
+  
+  <style>
+    /* Kustomisasi CSS */
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url('[https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80](https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80)');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      min-height: 90vh;
+    }
     
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border-radius: 12px;
+      border: 0;
+    }
+    
+    /* Memastikan gambar galeri memiliki tinggi yang sama dan rapi */
+    .gallery-img {
+      width: 100%;
+      height: 250px; /* Atur tinggi tetap untuk keseragaman */
+      object-fit: cover; /* Memotong gambar agar pas tanpa distorsi */
+      border-radius: 8px;
+    }
+    
+    /* Kustomisasi Kartu Profil/Fasilitas */
+    .card-profil img {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(25, 135, 84, 0.1); /* bg-success dengan opasitas rendah */
+      color: #198754; /* text-success */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- ============================ NAVIGATION BAR ============================ -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Desa Serindang</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sarana">Sarana & Prasarana</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================ HERO SECTION ============================ -->
+  <header id="beranda" class="hero-section d-flex align-items-center text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">Selamat Datang di Desa Serindang</h1>
+      <p class="lead mb-4">Gerbang Menuju Pemandangan Hijau dan Kehangatan Lokal Sambas</p>
+      <a href="#profil" class="btn btn-light btn-lg text-success fw-semibold shadow">Kenali Lebih Dalam</a>
+    </div>
+  </header>
+
+  <!-- ============================ PROFIL DESA ============================ -->
+  <section id="profil" class="py-5 bg-white">
+    <div class="container py-lg-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="[https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=800&q=80)" class="img-fluid rounded-4 shadow-sm" alt="Pemandangan Profil Desa Serindang">
+        </div>
+        <div class="col-md-6">
+          <h2 class="display-5 fw-bold text-success mb-3">Tentang Kami</h2>
+          <p class="lead text-secondary">Desa Serindang adalah desa yang asri di Kecamatan Tebas, Kabupaten Sambas. Kami bangga dengan budaya yang terjaga, potensi pertanian yang melimpah, dan semangat gotong royong warga.</p>
+          <p class="text-secondary">Visi kami adalah mewujudkan desa yang maju, mandiri, dan berdaya saing dengan mengoptimalkan potensi lokal.</p>
+          <a href="#" class="btn btn-success mt-3 shadow-sm">Baca Profil Selengkapnya <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SARANA & PRASARANA (BAGIAN YANG DIUBAH) ============================ -->
+  <section id="sarana" class="py-5 bg-light">
+    <div class="container py-lg-5">
+      <h2 class="text-center display-5 fw-bold text-success mb-5">Sarana & Prasarana Desa Serindang</h2>
+      <div class="row g-4">
+        
+        <!-- Kartu 1: Pendidikan (Sekolah) -->
+        <div class="col-md-4">
+          <div class="card h-100 card-profil border-0 shadow">
+            <img src="[https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80)" class="card-img-top" alt="Gedung Sekolah Serindang">
+            <div class="card-body p-4">
+              <div class="icon-box shadow-sm">
+                <i class="bi bi-book"></i>
+              </div>
+              <h5 class="card-title fw-bold text-success">Lembaga Pendidikan</h5>
+              <p class="card-text text-secondary">Desa Serindang menyediakan sarana pendidikan dasar, termasuk Pendidikan Anak Usia Dini (PAUD), Taman Kanak-Kanak (TK), dan Sekolah Dasar (SD) yang memadai untuk mencerdaskan generasi penerus desa.</p>
+              <a href="#" class="btn btn-sm btn-outline-success">Lihat Daftar Sekolah</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Kartu 2: Penduduk -->
+        <div class="col-md-4">
+          <div class="card h-100 card-profil border-0 shadow">
+            <img src="[https://images.unsplash.com/photo-1603201667141-5a2d4c673378?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1603201667141-5a2d4c673378?auto=format&fit=crop&w=600&q=80)" class="card-img-top" alt="Ilustrasi Penduduk Desa">
+            <div class="card-body p-4">
+              <div class="icon-box shadow-sm">
+                <i class="bi bi-people"></i>
+              </div>
+              <h5 class="card-title fw-bold text-success">Data Kependudukan</h5>
+              <p class="card-text text-secondary">Dengan populasi yang harmonis, warga Desa Serindang sebagian besar bermata pencaharian sebagai petani, buruh tani, dan pelaku UMKM. Warga hidup berdampingan dengan semangat gotong royong yang tinggi.</p>
+              <a href="#" class="btn btn-sm btn-outline-success">Statistik Penduduk</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Kartu 3: Fasilitas Umum -->
+        <div class="col-md-4">
+          <div class="card h-100 card-profil border-0 shadow">
+            <img src="[https://images.unsplash.com/photo-1563297298-639a0937a5f6?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1563297298-639a0937a5f6?auto=format&fit=crop&w=600&q=80)" class="card-img-top" alt="Ilustrasi Fasilitas Umum Jalan Desa">
+            <div class="card-body p-4">
+              <div class="icon-box shadow-sm">
+                <i class="bi bi-building"></i>
+              </div>
+              <h5 class="card-title fw-bold text-success">Fasilitas Umum</h5>
+              <p class="card-text text-secondary">Tersedia berbagai sarana umum untuk mendukung kehidupan warga, termasuk Masjid/Musholla sebagai pusat ibadah, Lapangan Olahraga untuk kebugaran, Puskesmas Pembantu (Pustu) untuk kesehatan dasar, dan infrastruktur jalan desa.</p>
+              <a href="#" class="btn btn-sm btn-outline-success">Lihat Lokasi Fasilitas</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ GALERI FOTO (MENGGUNAKAN FOTO ANDA) ============================ -->
+  <section id="galeri" class="py-5 bg-white">
+    <div class="container py-lg-5">
+      <h2 class="text-center display-5 fw-bold text-success mb-5">Galeri Foto Serindang</h2>
+      <div class="row g-3">
+        <!-- Foto 1: Sawah dengan Kelapa (image_9.png) -->
+        <div class="col-6 col-md-3">
+          <img src="/image_9.png" class="gallery-img shadow-sm" alt="Pemandangan Sawah Desa Serindang">
+        </div>
+        <!-- Foto 2: Jalan Desa (image_10.png) -->
+        <div class="col-6 col-md-3">
+          <img src="/image_10.png" class="gallery-img shadow-sm" alt="Jalan Utama Desa Serindang">
+        </div>
+        <!-- Foto 3: Sawah dengan Gunung (image_11.png) -->
+        <div class="col-6 col-md-3">
+          <img src="/image_11.png" class="gallery-img shadow-sm" alt="Pemandangan Sawah dan Gunung di Serindang">
+        </div>
+        <!-- Placeholder foto lainnya -->
+        <div class="col-6 col-md-3">
+          <img src="[https://images.unsplash.com/photo-1620310243452-944a991873fb?auto=format&fit=crop&w=500&q=80](https://images.unsplash.com/photo-1620310243452-944a991873fb?auto=format&fit=crop&w=500&q=80)" class="gallery-img shadow-sm" alt="Aktivitas Desa Serindang">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ LOKASI & KONTAK ============================ -->
+  <section id="lokasi" class="py-5 bg-light">
+    <div class="container py-lg-5">
+      <h2 class="text-center display-5 fw-bold text-success mb-5">Lokasi & Kontak</h2>
+      <div class="row">
+        <!-- Google Map Embed -->
+        <div class="col-md-6 mb-4 mb-md-0 map-container">
+          <iframe src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.271360000001!2d109.333333!3d-0.033333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDEnNjA4MCJTIDEwOcKwMjAnMDAuMCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.271360000001!2d109.333333!3d-0.033333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDEnNjA4MCJTIDEwOcKwMjAnMDAuMCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid)" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!-- Kontak Info -->
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <div class="bg-white p-5 rounded-4 shadow"
